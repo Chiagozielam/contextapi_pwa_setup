@@ -1,0 +1,1 @@
+export { useGeneralContext } from './general-context/GeneralProvider'

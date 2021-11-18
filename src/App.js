@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useGeneralContext } from './context'
 
 function App() {
+  const  { state: { testExxampleString }, runExampleFunction} = useGeneralContext();
+
+  useEffect(() => {
+    runExampleFunction();
+  },[])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,6 +17,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>{testExxampleString}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
