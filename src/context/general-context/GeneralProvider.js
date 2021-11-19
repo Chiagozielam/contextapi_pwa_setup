@@ -11,6 +11,7 @@ const GeneralProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(GeneralReducer, initialState)
 
+  // this function is just an example to show how the state is changes and used.
   const runExampleFunction = () => {
     dispatch({
       type: EXAMPLE,
